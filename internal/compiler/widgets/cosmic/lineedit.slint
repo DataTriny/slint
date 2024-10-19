@@ -20,6 +20,7 @@ export component LineEdit {
     accessible-value <=> text;
     accessible-placeholder-text: text == "" ? placeholder-text : "";
     accessible-action-set-value(v) => { text = v; edited(v); }
+    accessible-read-only: root.read-only;
 
     public function set-selection-offsets(start: int, end: int) {
         base.set-selection-offsets(start, end);

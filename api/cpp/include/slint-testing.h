@@ -342,6 +342,19 @@ public:
         return std::nullopt;
     }
 
+    /// Returns the accessible-read-only of that element, if any.
+    std::optional<bool> accessible_read_only() const
+    {
+        if (auto result = get_accessible_string_property(
+                    cbindgen_private::AccessibleStringProperty::ReadOnly)) {
+            if (*result == "true")
+                return true;
+            else if (*result == "false")
+                return false;
+        }
+        return std::nullopt;
+    }
+
     /// Sets the accessible-value of that element.
     ///
     /// Setting the value will invoke the `accessible-action-set-value` callback.

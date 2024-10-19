@@ -77,6 +77,7 @@ Use the following `accessible-` properties to make your items interact well with
 -   **`accessible-placeholder-text`** (_in_ _string_): A placeholder text to use when the item's value is empty. Applies to text elements.
 -   **`accessible-selectable`** (_in_ _bool_): Whether the element can be selected or not.
 -   **`accessible-selected`** (_in_ _bool_): Whether the element is selected or not. This maps to the "is-selected" state of listview items.
+-   **`accessible-read-only`** (_in_ _bool_): Whether the element's content can be edited or not. This maps to the "read-only" state of line edits, text edits and other widgets.
 
 You can also use the following callbacks that are going to be called by the accessibility framework:
 
