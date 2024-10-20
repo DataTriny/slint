@@ -463,6 +463,13 @@ impl NodeCollection {
         }
 
         if item
+            .accessible_string_property(AccessibleStringProperty::Enabled)
+            .is_some_and(|x| x != "true")
+        {
+            builder.set_disabled();
+        }
+
+        if item
             .accessible_string_property(AccessibleStringProperty::Selectable)
             .is_some_and(|x| x == "true")
         {
