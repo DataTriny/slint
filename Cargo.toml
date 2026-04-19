@@ -206,3 +206,7 @@ panic = "abort"
 
 [profile.dev]
 panic = "abort"
+
+[patch.crates-io]
+accesskit = { git = "https://github.com/Accesskit/accesskit", branch = "ios" }
+accesskit_winit = { git = "https://github.com/Accesskit/accesskit", branch = "ios" }
